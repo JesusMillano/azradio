@@ -6,19 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom right, #111, #444);
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
             text-align: center;
-            padding: 40px;
+            padding: 20px;
         }
 
-        h1 {
-            color: #ff4757;
+        header img {
+            width: 250px;
         }
 
-        .player {
-            margin-top: 30px;
+        main {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        aside.left, aside.right {
+            width: 25%;
+            padding: 20px;
+        }
+
+        section.content {
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         iframe {
@@ -28,23 +54,72 @@
             border: none;
         }
 
-        .description {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 18px;
+        .top10 {
+            list-style: none;
+            padding: 0;
+        }
+
+        .top10 li {
+            margin-bottom: 15px;
+        }
+
+        .top10 img {
+            width: 100%;
+            max-width: 150px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .socials a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .socials a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>🎶 Bienvenidos a AZRadio.cl</h1>
-    <p class="description">
-        Transmitiendo lo mejor de la música chilena, latinoamericana, estadounidense y europea de los años 80 y 90.
-        24/7 sin interrupciones. ¡Revive los clásicos con nosotros!
-    </p>
-
-    <div class="player">
-        <!-- Aquí podrías insertar un reproductor real si tienes un stream. Por ahora, un placeholder -->
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbTxeAdrVG2l?utm_source=generator"></iframe>
-    </div>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Logo_80s_style.svg/2560px-Logo_80s_style.svg.png" alt="AZRadio 80s Logo">
+    </header>
+    <main>
+        <aside class="left">
+            <h2>🎵 Top 10</h2>
+            <ul class="top10">
+                <li>1. Soda Stereo - Persiana Americana <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Soda_Stereo_Signos.jpg" alt="Signos"></li>
+                <li>2. Michael Jackson - Billie Jean <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Michael_Jackson_-_Thriller.png" alt="Thriller"></li>
+                <li>3. Los Prisioneros - Tren al Sur <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Corazonesalbumcover.jpg" alt="Corazones"></li>
+                <li>4. Madonna - Like a Prayer <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/LikeaPrayer.jpg" alt="Like a Prayer"></li>
+                <li>5. A-ha - Take On Me <img src="https://upload.wikimedia.org/wikipedia/en/0/01/A-ha_Take_On_Me_1985.jpg" alt="Take On Me"></li>
+                <li>6. Virus - Pronta Entrega <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Virus_Agitar.jpg" alt="Agitar"></li>
+                <li>7. Bon Jovi - Livin' on a Prayer <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Bon_Jovi_-_Slippery_When_Wet.png" alt="Slippery"></li>
+                <li>8. Eros Ramazzotti - Otra como tú <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Eros_tutte.jpg" alt="Tutte storie"></li>
+                <li>9. The Police - Every Breath You Take <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/ThePoliceSynchronicity.jpg" alt="Synchronicity"></li>
+                <li>10. Mecano - Hijo de la Luna <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Mecano_Entre_el_cielo_y_el_suelo.jpg" alt="Entre el cielo y el suelo"></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <p class="description">
+                Transmitiendo lo mejor de la música chilena, latinoamericana, estadounidense y europea de los años 80 y 90.
+                24/7 sin interrupciones. ¡Revive los clásicos con nosotros!
+            </p>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbTxeAdrVG2l?utm_source=generator"></iframe>
+        </section>
+        <aside class="right">
+            <h2>📱 Redes Sociales</h2>
+            <div class="socials">
+                <a href="#">Instagram: @azradio_80s</a>
+                <a href="#">Twitter: @azradioChile</a>
+                <a href="#">Facebook: AZRadioOficial</a>
+                <a href="#">YouTube: AZRadioTV</a>
+                <a href="#">TikTok: @azradio_tiempos</a>
+            </div>
+        </aside>
+    </main>
 </body>
 </html>
